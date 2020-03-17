@@ -1,0 +1,41 @@
+<!-- In this lecture we will learn about different operators in JS. -->
+<!doctype html>
+
+
+<html>
+
+    <head><title>Operators in JS</title>
+    
+        <script>
+        
+            //Assignment operator is used to assign a value to a variable.
+            var age=19;
+            // '+' operator
+            var num1=15;
+            var num2=10;
+            var age=num1+num2;
+            document.write(age);
+            // in the same way we can use '- * / operators'
+            //increment operator is used to increment by 1.
+            age++;
+            //if we want to go to new line in javascript we can use br tag of html as follow:
+            document.write("<br/>");
+            document.write(age);
+            //decrement operator is used to decrement by 1.
+            age--;
+            document.write("<br/>");
+            document.write(age);
+            //now we have to understand the precedence of operators. So the rule is that the * and / operator takes precedence over + and -. But we can force + and - to evaluate first using ().
+            var n1=5;
+            var n2=2;
+            var result=5+2*2;
+            document.write("<br/> Result = ");
+            document.write(result);
+            var result=(5+2)*2;
+            document.write("<br/> Result = " );
+            document.write(result);
+        </script>
+    
+    </head>
+
+</html>
