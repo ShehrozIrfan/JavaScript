@@ -1,0 +1,31 @@
+<!-- In this lecture we will learn how we can use if statements and if-else within a function -->
+<!doctype html>
+
+<html>
+
+    <head><title>Functions & If</title></head>
+    
+    <script>
+    
+        function display(player,distance){
+            //&& is used to test both(left and right) the conditions and it only execute if both the conditions are true.
+            if(distance<= 350 && distance > 0){
+                document.write(player+" hit the ball");
+            }
+            else if (distance <=0){
+                document.write(player+ " Struck Out!!!");
+            }
+            else{
+                document.write(player+" hit a home run");
+            }
+        }
+        
+        //now we will call the function
+        display("Babar Azam",355);
+    </script>
+
+    <body>
+
+    
+    </body>
+</html>
