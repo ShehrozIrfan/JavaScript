@@ -1,0 +1,33 @@
+<!-- In this lecture we will learn about global and local variables. -->
+<!doctype html>
+
+
+<html>
+
+    <head><title>Global & Local Variables</title></head>
+    
+    <script>
+    //Global Variables: the variables that are declared outside any function are called global variables and these variables remain alive until the page is loaded.
+        var nameG="Hammad Shabbir";
+        
+        function display(){
+            //Local Variables: the variables that are declared inside any function are called as local variables. And these variables remain alive until the function is executing.
+            var nameL="Ubaid ul Hassan";
+            document.write(nameL);
+        }
+        
+        //so we cannot access the local variable outside a function. So the following statement doesn't return any result.
+        //document.write(nameL);
+        //so to access local variables we have to write the name of the function as:
+        display();
+        document.write("<br/>");
+        //but we can access global variables outside any function.
+        document.write(nameG);
+        
+       
+    </script>
+    <body>
+    
+    </body>
+
+</html>
