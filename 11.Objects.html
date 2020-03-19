@@ -1,0 +1,150 @@
+<!-- In this lecture we will learn objects in JS. How we can create an object?
+var object_name = {
+//properties,
+};
+
+var student={
+name: "Hammad",
+degree: "BS-IT",
+age: 21
+};
+
+How we can access the properties within an object?
+
+object_name . property_name;
+student.degree;
+
+Notes:
+1. Variables inside an object are called properties.
+2. Real life objects have multiple properties.
+3. Use the . to access an object's properties.
+
+We can also create functions inside an object as:
+function_name : function (){
+
+}
+e.g;
+var student={
+name:"Hammad",
+degree:"BS-IT",
+age:21,
+
+display:function(){
+document.write("We are using functions");
+}
+};
+
+How we can access a function that is inside an object.
+student.display();
+
+Note: Functions insdie objects are called methods.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>Objects</title></head>
+    
+    <script>
+    
+        var student={
+            name:"Shehroz",
+            degree:"BS-IT",
+            age:20,
+            status: true,
+            display:function(){
+
+            document.write("Name="+student.name);
+            }
+        
+        };
+    
+        student.display();
+        document.write("<br/>"+student.age);
+    
+        //we can also update the value of properties inside an object.
+        var age=student.age+5;
+        document.write("<br/>"+"New Age= "+age);
+        
+        if(student.status== true){
+            document.write("<br/>"+"You are promoted to next semester"+"<br/>");
+        }
+        else{
+            document.write("<br/>"+"You havve to pass supplementary courses");
+        }
+        
+        //we can also add a property inside an object from outside as:
+        student.teacher="XYZ";
+        
+        document.write("<br/>"+student.teacher);
+        
+        //we can delete a property as:
+        delete student.teacher;
+        
+        document.write("<br/>"+student.teacher);
+        
+        //we can also create a property without a value as:
+        student.teacher;
+        
+        document.write("<br/>"+student.teacher);
+        /******************************************
+        
+        Global Object:
+        1.Objects that JavaScript provides that we can use.
+        2.Already written for us so we can just use their properties and methods.
+        
+        we have string objects and math objects as global objects in javascript.
+        
+        Now let's take a look at string objects.
+        *********************************************/
+        var display="Hello how are you doing";
+        
+        
+        //1. toUpperCase() - this is used to convert string to uppercase.
+        display=display.toUpperCase();
+        document.write("<br/>"+display);
+        //2. toLowerCase() - this is used to convert string to lowercase.
+        display=display.toLowerCase();
+        document.write("<br/>"+display);
+        
+        
+        //3. charAt() - is used to give the character at given place.
+        
+        //In the same way you can see length- is used to give the length of string.
+        // bold()- is used to bold the string
+        // italic()- is used to italic the string.
+        // replace() - is used to replace the word or character.
+        
+        
+        /*******************************************
+        
+        Math Objects
+        ********************************************/
+        //round() - is used to round the number.
+        var num=4.7;
+        var Nnum=Math.round(num);
+        document.write("<br/>"+Nnum);
+
+        //if we want to round 4.3 upto 5.
+        var num=4.3;
+        var Nnum=Math.ceil(num);
+        document.write("<br/>"+Nnum);
+        //if we want to round 4.7 upto 4
+        var num=4.7;
+        var Nnum=Math.floor(num);
+        document.write("<br/>"+Nnum);
+        
+        //sqrt method is used to take square root
+        var num=Math.sqrt(100);
+        document.write("<br/>"+num);
+        
+    </script>
+    
+    
+    <body>
+    
+    
+    </body>
+
+</html>
