@@ -1,0 +1,44 @@
+<!-- In this lecture we will learn about arrays in JavaScript. Arrays are used to store multiple values and we can access the values using the index. Index starts from 0. -->
+<!doctype html>
+
+<html>
+
+    
+    <head><title>Arrays</title></head>
+    
+    <script>
+    
+        //so an array can be created as:
+        
+        var names=["Hammad","Qasim","Shahbaz","Khizar","Nouman","Ubaid","Ali Raza","Nazim","Hussnain"];
+        
+        var display=names[0];
+        document.write(display);
+        
+        var display=names[5];
+        //br is used for line break.
+        document.write("<br/>");
+        document.write(display);
+    
+        //If we want to update the any value in an array we can do it as:
+        
+        names[8]="Saqlain";
+        document.write("<br/>");
+        //we can also display with index as:
+        document.write(names[8]);
+        document.write("<br/><br/>");
+        //if we want to display all the values in an array: 
+        document.write("All array Values: <br/><br/>");
+        for(var i=0;i<9;i++){
+            document.write(names[i]);
+            document.write("<br/>");
+        }
+    </script>
+    
+    <body>
+    
+    
+    
+    </body>
+
+</html>
