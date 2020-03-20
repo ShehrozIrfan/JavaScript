@@ -1,0 +1,45 @@
+<!-- 
+In this lecture we will learn about getElementsByTagName() method. This creates node list just like array index. e.g;
+if we have four paragraphs in our document then if we apply getElementByTagName() to p. then the first paragraph has index 0, second 1, third 2 and so on.
+--->
+<!doctype html>
+
+<html>
+
+    <head><title>getElementsByTagName</title></head>
+    
+    <script>
+    
+        function changeStyle(){
+            
+            var para=document.getElementsByTagName("p");
+            /*
+            var change=para[0].style.color="pink";
+            var change=para[1].style.color="Yellow";
+            var change=para[2].style.fontStyle="Bold";
+            var change=para[3].style.fontStyle="Italic";
+            */
+            //now let's apply fontStyle="italic" to all paragraph using for loop.
+            
+            for(var i=0;i<para.length;i++){
+                para[i].style.fontStyle="italic";
+            }
+            
+        }
+        
+        
+        
+    </script>
+
+    
+    <body>
+    
+        
+        <p id="para1">Click Submit and see magic</p>
+        <p id="para2">Click Submit and see magic</p>
+        <p id="para3">Click Submit and see magic</p>
+        <p id="para4">Click Submit and see magic</p>
+        <button onclick="changeStyle()">Submit</button>
+    
+    </body>
+</html>
