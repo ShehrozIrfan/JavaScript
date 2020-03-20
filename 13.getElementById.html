@@ -1,0 +1,64 @@
+<!-- From now to onwards you will start seeing the magic of JavaScript.
+In this lecture we will learn about getElementById method.
+-->
+<!-- 
+1. Need to grab the element ID. We can do that with the getElementById method.
+2. Once we have the ID we are good to go and we can start to style the element with the style object which is another object in the DOM.
+
+CSS                       JavaScript
+-------------            ---------------
+color                     color
+border                    border
+margin                    margin
+
+background-color          backgroundColor
+font-style                fontStyle
+text-decoration           textDecoration
+
+padding-left              padding-left
+border-left               border-left
+-->
+<!doctype html>
+
+<html>
+
+    <head><title>getElementById</title></head>
+    
+    <script>
+    
+        //here is the changeStyle() function which will be executed when the submit button is clicked.
+        function changeStyle(){
+            var col=document.getElementById("para1").style.color="Pink";
+            var bckcolor=document.getElementById("para2").style.backgroundColor="lightblue";
+            var fStyle=document.getElementById("para3").style.fontStyle="Italic";
+            var bor=document.getElementById("para4").style.border="2px solid black";
+            var mar=document.getElementById("para5").style.margin="40px";
+            
+            var textD=document.getElementById("para6").style.textDecoration="underline dotted";
+        }
+    
+    </script>
+
+    <body>
+    
+        <h2>Click on Submit Button to See Magic</h2>
+        
+        <p id="para1">Changes color on clicking submit</p>
+        
+        
+        <p id="para2">Changes background color on clicking submit</p>
+        
+        <p id="para3">Changes Font Style on clicking submit</p>
+        
+        <p id="para4">Apply Border to text on clicking submit</p>
+        
+        <p id="para5">Apply margin of 10px to text on clicking submit.</p>
+        
+        <p id="para6">Apply text decoration on clicking submit.</p>
+        
+        <!-- onclick() means that perform the action whenever is the button is clicked. So whenever this button is clicked the changeStyle() function will be executed. -->
+        <button onclick="changeStyle()">Submit</button>
+    
+    
+    </body>
+</html>
