@@ -1,0 +1,54 @@
+<!-- in this lecture we will learn how we can replace the using inner HTML -->
+
+<!-- 
+JavaScript - It's all about getting those elements
+
+1. Select the Element we want to target
+
+getElementById() - Select elements by their id.
+
+getElementsByTagName() - Select elements by their tag name.
+
+getElementsByClassName() - Select elements by their class name.
+
+2. Change whatever is we want to change in that element.
+
+CSS styles
+
+Change text
+
+Change Images
+
+Validation
+
+Create new pages
+
+Change Internals
+-->
+<!doctype html>
+
+<html>
+
+
+    <head><title>innerHTML</title></head>
+    
+    <script>
+    
+    function changeStyle(){
+//we want the old text to be replaced by the new text below using inner HTML
+        var paragraph=document.getElementsByClassName("para");
+        
+        var change=paragraph[0].innerHTML="New Text 1";
+        var change=paragraph[1].innerHTML="New Text 2";
+    }    
+    
+    </script>
+    
+    <body>
+    
+        <p class="para">Old Text1</p>
+        <p class="para">Old Text2</p>
+        <button onclick="changeStyle()">Click here to change text</button>
+    </body>
+    
+</html>
