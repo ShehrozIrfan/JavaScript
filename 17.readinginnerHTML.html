@@ -1,0 +1,41 @@
+<!--
+In this lecture we will learn how we can read content using innerHTML.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>Reading Using Inner HTML</title></head>
+    
+    <script>
+    
+        function changeStyle(){
+            
+            var paragraph=document.getElementsByClassName("para");
+            
+            var firstp=paragraph[0].innerHTML;
+            var secondp=paragraph[1].innerHTML;
+            
+            var add=paragraph[2].innerHTML=firstp+secondp;
+           //if we want to get rid of first two paragraphs and want only the added paragraph then we will use this.
+            /*
+            var firstp=paragraph[0].innerHTML=" ";
+            var secondp=paragraph[1].innerHTML=" ";
+            */
+        }
+    
+    </script>
+
+    
+    <body>
+    
+        <p class="para">Freelancing is difficult </p>
+        <p class="para">during early days</p>
+        <!-- So what we wanna do here is that we want to read the content of first paragraph and then the second paragraph and then combine the both and place it in third paragraph. -->
+        <p class="para"></p>
+    
+        <button onclick="changeStyle()">Click here to add</button>
+    
+    </body>
+</html>
