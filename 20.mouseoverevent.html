@@ -1,0 +1,35 @@
+<!-- 
+In this lecture, we will learn about mouse over event and mouse out event.
+mouse over event will occur when mouse is on something specific on webpage and mouse is on that thing the event happens and whatever the style we have applied it works. 
+mouse out event occurs when we back our mouse from something specific on which we previously have mouse over.
+-->
+
+<!doctype html>
+
+<html>
+
+<head><title>Events(Mouse Over & Mouse Out)</title></head>
+    
+    <script>
+    
+        //when the mouse is on the text then this event happens
+        function changeStyle(){
+            
+            var text=document.getElementById("change").style.backgroundColor="pink";
+        }
+        //when the mouse is taken back from the text then this event happens.
+        function backToNormal(){
+            
+            var text=document.getElementById("change").style.backgroundColor="";
+        }
+        
+    
+    </script>
+
+    <body>
+    
+        <p id="change" onmouseover="changeStyle()" onmouseout="backToNormal()">Our Squad is Awesome!!! Favorite color of squad is Hot Pink !!!</p>
+        
+        
+    </body>
+</html>
