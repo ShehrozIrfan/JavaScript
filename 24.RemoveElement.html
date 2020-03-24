@@ -1,0 +1,76 @@
+<!-- 
+In this lecture we will learn how we can remove an element. So to remove an element its a three step process:
+1. get that element by tagname and then specify its position.
+2. Find the parent of that element.
+3. remove the element
+-->
+
+<!doctype html>
+
+<html>
+
+
+    <head><title>Creating a New Element</title></head>
+    
+    <script>
+    
+        function newParagraph(){
+            var elementH=document.createElement("h2");
+            var main=document.getElementById("main");
+            main.appendChild(elementH);
+            
+            
+            var textH=document.createTextNode("The Battle of Salamis");
+            
+            elementH.appendChild(textH);
+            
+            var element=document.createElement("p");
+            main.appendChild(element);
+            var text=document.createTextNode("The Battle of Salamis was fought between an alliance of Greek citites and the Persian Empire in 480 BC. The Greeks decisively defeated the Persian navy.");
+            element.appendChild(text);
+        }
+    
+        function removeElement(){
+             // here we first get the element then specify its position in index which starts form 0. As we know when the page is loaded there are two paragraphs and when new paragraph is added then it will be the third and its index will be 2. same is the case with heading
+            var elementH=document.getElementsByTagName("h2")[2];
+            //then we find the parent of that elemnt using parentNode
+            var parent= elementH.parentNode;
+            //then we removed that element.
+            parent.removeChild(elementH);
+            
+            //again we get that paragraph and specify its position.
+            var elementP=document.getElementsByTagName("p")[2];
+            //as we have already found the parent in heading section that's why we didn't find here parent. because this p is the child of h2
+            parent.removeChild(elementP);
+            
+            
+        }
+    </script>
+
+    
+    <style>
+
+        h2{
+            color:hotpink;
+        }
+        
+    </style>
+    
+    <body>
+    
+        <div id="main">
+    <h2>HANNIBAL - THE BATTLE OF CANNAE</h2>
+       
+            <p>After defeating the Romans at the Battle of Lake Trasimene, Hannibal now moved his forces down south. There was panic in Rome and Quintus Fabius Maximus was appointed dictator to deal with Hannibal. Fabius, however, refused to meed Hannibal in the open field</p>
+            
+        <h2>AFTERMATH OF THE BATTLE OF CANNAE</h2>
+        
+            <p>After the horrific defeat at the Battle of Cannae, the Romans reinstituted Fabius' avoidance strategy. The Romans no longer refused to meet Hannibal in headd on collisions. Rather the Roman army kept a watchful eye on Hannibal, but always at a close distance.</p>
+            
+            </div>
+        <!-- When this button is clicked a new paragraph will be added -->
+        <button onclick="newParagraph()">Click if you want to read about another battle</button>
+    <br/><br/>
+        <button onclick="removeElement()">Click Here to Remove Paragraph</button>
+    </body>
+</html>
