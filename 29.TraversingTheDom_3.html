@@ -1,0 +1,72 @@
+<!--
+In this lecture we will learn how we can traverse the dom form sibling to sibling. In the previous couple of lectures we have learnt how we can traverse the dom from parent to child and from child to parent but in this lecture we will learn how we can traverse the dom from sibling to sibling.
+
+             div
+              |
+        --------------
+       |      |       |
+       p      p       p
+
+So in the figure above all the 'p' are siblings. So we will traverse the Dom from siblings to siblings.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>Traversing the DOM_3</title></head>
+    
+    <script>
+    
+        function traverse(){
+            
+            var para2=document.getElementById("p2");
+            //here we have applied style to previous element sibling.
+            var sibling=para2.previousElementSibling;
+            
+            sibling.style.color="blue";
+            
+            //we can also apply style to next element sibling
+            
+            var siblingN=para2.nextElementSibling;
+            
+            siblingN.style.color="green";
+            
+        }
+    
+    </script>
+
+    
+    <style>
+
+        body{
+
+        background-color: pink;
+        padding:20px;
+            
+        }
+        div{
+            background-color:darkorange;
+            padding:20px;
+        }
+    
+    </style>
+    <body>
+    
+        <div id="main">
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <!-- In this we have applied id to the second paragraph so that we can traverse forward and backward. -->
+            <p  id="p2">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        
+        
+        </div>
+        <br/><br/>
+        <button onclick="traverse()">Click me to Traverse the DOM</button>
+    
+    </body>
+</html>
+
+</html>
