@@ -1,0 +1,58 @@
+<!--
+In this lecture we will learn how we can traverse the dom form child to parent. In the previous lecture we traversed the dom from parent to child but in this lecture we will traverse the dom from child to parent.
+-->
+<!doctype html>
+
+<html>
+
+    <head><title>Traverse the Dom_2</title></head>
+    
+    <script>
+    
+        function traverse(){
+            //first of all we find the child.
+            
+            var child=document.getElementById("p1");
+            
+            //in the second step we will find  the parent of that child.
+            var parent=child.parentNode;
+            
+            //now we will apply style to parent and whatever style is applied to the parent will also be applied to all of its childs.
+            
+            parent.style.color="blue";
+        }
+    
+    </script>
+
+<style>
+
+        body{
+
+        background-color: pink;
+        padding:20px;
+            
+        }
+        div{
+            background-color:darkorange;
+            padding:20px;
+        }
+    
+    </style>
+    <body>
+    
+        <div id="main">
+        
+        <!-- in this we will also apply id to p so that we can acces this as a children. -->
+            <p id="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        
+        
+        </div>
+        <br/><br/>
+        <button onclick="traverse()">Click me to Traverse the DOM</button>
+    
+    </body>
+</html>
