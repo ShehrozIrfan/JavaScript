@@ -1,0 +1,79 @@
+<!-- 
+In this lecture we will learn how we can create attribute in our existing file that we have created in our previous lectures.
+-->
+<!doctype html>
+
+<html>
+
+
+    <head><title>Creating a New Element</title></head>
+   
+     <style>
+
+        h2{
+            color:hotpink;
+        }
+        .test{
+            color:darkblue;
+        }
+        
+    </style>
+    
+    <script>
+    
+        function newParagraph(){
+            var elementH=document.createElement("h2");
+            var main=document.getElementById("main");
+            main.appendChild(elementH);
+            
+            
+            var textH=document.createTextNode("The Battle of Salamis");
+            
+            elementH.appendChild(textH);
+            
+            var element=document.createElement("p");
+            main.appendChild(element);
+            var  text=document.createTextNode("The Battle of Salamis was fought between an alliance of Greek citites and the Persian Empire in 480 BC. The Greeks decisively defeated the Persian navy.");
+            element.appendChild(text);
+            
+            
+            var p=document.getElementsByTagName("p")[2];
+            //here you can use any html attriubte - we are using id.
+            var pAttribute=document.createAttribute("class");
+            //now we will assign a value to our id.
+            pAttribute.value="test";
+           //now we will use our element.
+            p.setAttributeNode(pAttribute);
+        }
+    
+        function removeElement(){
+            var elementH=document.getElementsByTagName("h2")[2];
+            var parent= elementH.parentNode;
+            parent.removeChild(elementH);
+            var elementP=document.getElementsByTagName("p")[2];
+            parent.removeChild(elementP);
+            
+            
+        }
+    </script>
+
+    
+   
+    
+    <body>
+    
+        <div id="main">
+    <h2>HANNIBAL - THE BATTLE OF CANNAE</h2>
+       
+            <p>After defeating the Romans at the Battle of Lake Trasimene, Hannibal now moved his forces down south. There was panic in Rome and Quintus Fabius Maximus was appointed dictator to deal with Hannibal. Fabius, however, refused to meed Hannibal in the open field</p>
+            
+        <h2>AFTERMATH OF THE BATTLE OF CANNAE</h2>
+        
+            <p>After the horrific defeat at the Battle of Cannae, the Romans reinstituted Fabius' avoidance strategy. The Romans no longer refused to meet Hannibal in headd on collisions. Rather the Roman army kept a watchful eye on Hannibal, but always at a close distance.</p>
+            
+            </div>
+        <button onclick="newParagraph()">Click if you want to read about another battle</button>
+    <br/><br/>
+        <button onclick="removeElement()">Click Here to Remove Paragraph</button>
+    </body>
+</html>
