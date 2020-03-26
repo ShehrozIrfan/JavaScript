@@ -1,0 +1,73 @@
+<!--
+In this lecture we will learn how we can traverse the DOM. So we can traverse the node using parent child relationship.
+-->
+
+<!doctype html>
+
+<html>
+
+
+    <head><title>Traversing the DOM 1</title></head>
+
+    <script>
+    
+        function traverse(){
+            //so as we know we can traverse the dom using parent-child relationship.
+            
+            //1. so first we get the parent , in our case div is the parent and all 'p' are its child.
+            var parent=document.getElementById("main");
+            
+            //2. Now we go to the child
+            var child=parent.childNodes[1];
+            //so what does 1 means? in previous lectures we have learnt that index start from 0 but in this case when we are traversing the dom then the white space before the text is also considered as node. So there is a white space before our paragraph 1 so the index of that white space is 0 then our first paragraph having index 1 then again white space having index 2 and then second paragraph having index 3 and so on.
+            child.style.color="white";
+            
+            //we can also apply style to first paragraph only.
+            
+            var child1=parent.firstElementChild;
+             
+            child1.style.color="Green";
+            
+            //in the same way we can also apply style to last paragraph as :
+            
+            var child2=parent.lastElementChild;
+             
+            child2.style.color="white";
+            
+            
+            
+        }
+    </script>
+    
+    <style>
+
+        body{
+
+        background-color: pink;
+        padding:20px;
+            
+        }
+        div{
+            background-color:darkorange;
+            padding:20px;
+        }
+    
+    </style>
+    <body>
+    
+        <div id="main">
+        
+        
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        
+        
+        </div>
+        <br/><br/>
+        <button onclick="traverse()">Click me to Traverse the DOM</button>
+    
+    </body>
+</html>
