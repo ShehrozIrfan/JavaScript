@@ -1,0 +1,67 @@
+<!--
+In this lecture we will learn how we can create Attribute using JS.
+Its a four step process:
+1. get the element whose attribute you want to create
+2. create attribute using createAttribute
+3. assign the value to attribute
+4. set the attribute node.
+-->
+<!doctype html>
+
+<html>
+
+
+    <head><title>Creating Attribute</title></head>
+    
+    <script>
+
+        function create(){
+         //Creating Attribute for h1 //
+          //1. get the element
+            var h1=document.getElementsByTagName("h1")[0];
+            //2.create attribute
+            var att=document.createAttribute("class");
+            //assign value to attribute
+            att.value="demo1";
+            //setting attribute node
+            h1.setAttributeNode(att);
+            
+            //Creating Attribute for p//
+            var p=document.getElementsByTagName("p")[0];
+            
+            var pAtt=document.createAttribute("class");
+            
+            pAtt.value="demo2";
+            
+            p.setAttributeNode(pAtt);
+            
+        }
+    
+    </script>
+
+    
+    <style>
+/* Now we will apply style to all those attributes that we have created */
+
+        .demo1{
+            color:deepskyblue;
+        }
+        
+        .demo2{
+
+            color:hotpink;
+        }
+    </style>
+
+    
+    <body>
+    
+        
+        <h1>Hello Squad</h1>
+        
+        <p>Favorite color of squad is Hot Pink</p>
+        
+        <button onclick="create()">Click to see magic</button>
+    
+    </body>
+</html>
