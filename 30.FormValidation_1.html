@@ -1,0 +1,53 @@
+<!-- 
+In this lecture we will learn how we can do form validation using JS.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>Form Validation_1</title></head>
+    
+    <script>
+
+        function validate(){
+            // first we get the value by using get element by id.
+            var uname=document.getElementById("name");
+            
+            //if username field is empty.
+            if(uname.value == ""){
+                alert("Username cannot be empty");
+                
+                //we can also mark red the username field as:
+                uname.focus();
+                uname.style.border="2px solid red";
+                
+                //we return false so that the action of the form is not performed
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    
+    
+    </script>
+    
+    <body>
+    
+        <!-- here you can see return is written before the function name because when we do JS we will return true or false on the basis of which action of this form is performed. If we return false then the action will not be performed. and if we return true then the action will be performed. -->
+        <form action="" method="post" onsubmit="return validate();">
+        <br/><br/>
+            <input type="text" id="name" placeholder="User name">
+            
+            <br/><br/>
+            
+            <input type="submit" value="submit">
+        
+        </form>
+    
+    
+    </body>
+
+
+</html>
