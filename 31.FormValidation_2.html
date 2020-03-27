@@ -1,0 +1,68 @@
+<!-- Form Validation Part 2 -->
+<!doctype html>
+
+<html>
+
+    <head><title>Form Validation_2</title></head>
+    
+    <script>
+    
+        function validate(){
+            
+            //first of all we get the username and password by using get element by id.
+            
+            var uname=document.getElementById("name");
+            var pass=document.getElementById("password");
+            // then we will check to make sure that username and password is not empty.
+            if(uname.value == "" || pass.value == ""){
+
+                //if user name is empty then this message will be shown.
+                if(uname.value == ""){
+                    alert("Username cannot be empty");
+                    uname.focus();
+                    uname.style.border="2px solid red";
+                }
+                //if password is empty then this message will be shown.
+                else{
+                    alert("Password cannot be empty");
+                    pass.focus();
+                    pass.style.border="2px solid red";
+                }
+            
+            return false;
+            }
+            //if the length of username is less than 5 and the length of password is less than 8 then the following messages  will be shown.
+            else if(uname.value.length < 5 || pass.value.length < 8){
+                if(uname.value.length < 5){
+                    alert("username must contain atleast 5 characters!");
+                }
+                else{
+                    alert("password must contain atleast 8 characters!");
+                }
+            return false;
+            }
+            
+            //if all the above conditions are false then the following condition works and the form will be submitted.
+            else{
+                alert("your form has been submitted!!!");
+                return true;
+            }
+        }
+    
+    </script>
+
+    <body>
+    
+     <form action="" method="post" onsubmit="return validate();">
+        <br/><br/>
+            <input type="text" id="name" placeholder="User name">
+            <br/><br/>
+         <input type="password" id="password" placeholder="password">
+            <br/><br/>
+            
+            <input type="submit" value="submit">
+        
+        </form>
+        
+    </body>
+</html>
