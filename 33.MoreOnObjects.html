@@ -1,0 +1,47 @@
+<!--
+In this lecture we will learn how we can use objects.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>More on Objects</title></head>
+    
+    <body>
+    
+    
+        <p id="para"></p>
+        <button onclick="changeStyle()">
+        
+            Click here to see magic
+            
+        </button>
+        
+        
+        <script>
+        
+            //this is the class.
+            function car(type,color,miles){
+                this.type=type;
+                this.color=color;
+                this.miles=miles;
+                
+            }
+            //these are the objects created
+            var car1= new car("Compact","blue",6500);
+            var car2=new car("Truck","red",397);
+            var car3=new car("SUV","yellow",9948);
+            
+            //this function will execute when the button is clicked
+            function changeStyle(){
+            
+            document.getElementById("para").innerHTML= car1.type + " car with " + car1.miles + " miles " + car1.color + " is the color ";    
+                
+            }
+        
+        </script>
+    
+    </body>
+
+</html>
