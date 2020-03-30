@@ -1,0 +1,57 @@
+<!--
+In this lecture we will learn how we can add confirmation box using JS.
+-->
+
+<!doctype html>
+
+<html>
+
+    <head><title>Confirmation Box</title></head>
+    
+    <script>
+    
+        function changeStyle(){
+            
+            
+            //This is how we can add the confirmation box. 
+            var confirmation=confirm("These changes are final!");
+            
+            //we want the changes to be applied if user clicks the ok otherwise not.
+            if(confirmation == true){
+                
+                
+            
+            var paragraph=document.getElementsByClassName("para");
+            
+            var firstp=paragraph[0].innerHTML;
+            var secondp=paragraph[1].innerHTML;
+            
+            var add=paragraph[2].innerHTML=firstp+secondp;
+           //if we want to get rid of first two paragraphs and want only the added paragraph then we will use this.
+            
+            var firstp=paragraph[0].innerHTML=" ";
+            var secondp=paragraph[1].innerHTML=" ";
+            
+            
+            //so if we again click that button then our text will also get hidden so we have to disable that button.
+            
+            document.getElementById("test").style.visibility="hidden";
+        
+            
+            }
+        }
+    
+    </script>
+
+    
+    <body>
+    
+        <p class="para">Freelancing is difficult </p>
+        <p class="para">during early days</p>
+        <!-- So what we wanna do here is that we want to read the content of first paragraph and then the second paragraph and then combine the both and place it in third paragraph. -->
+        <p class="para"></p>
+    
+        <button onclick="changeStyle()" id="test">Click here to add</button>
+    
+    </body>
+</html>
